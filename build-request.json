@@ -1,0 +1,138 @@
+{
+  "kind": "build_request",
+  "title": "Redesign UI to differentiate ConnectSphere from Instagram's visual style",
+  "projectName": "ConnectSphere",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-13",
+      "text": "Redesign the StoriesStrip component to replace circular avatar bubbles (Instagram-style) with a horizontal card strip using rectangular or pill-shaped story cards that display the user's name below a square/rounded-rectangle thumbnail with a distinct colored border indicator for unseen stories.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "change some parts of app which is looking similar to ig and give it diffrent look"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Stories strip no longer uses circular avatar-only bubbles",
+        "Story cards are rectangular or pill-shaped with a visible thumbnail area",
+        "Unseen stories use a distinct non-ring indicator (e.g., gradient left border or glow badge)",
+        "Username is visible on each story card without requiring a tap"
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "text": "Redesign the PostCard component to move away from the Instagram-style card layout. Use a content-first layout: place the post text/image prominently at the top, move the author info (avatar, display name, username, timestamp) into a compact inline row below the content, and replace the three-dot overflow menu with an inline icon row for actions. The like and comment counts should be displayed as pill badges rather than plain text counters.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "change some parts of app which is looking similar to ig and give it diffrent look"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Post image or text content appears before the author row",
+        "Author info is in a compact single row beneath the content",
+        "Like and comment counts are styled as pill/badge elements",
+        "Action buttons use a distinct layout not resembling Instagram's bottom icon row"
+      ]
+    },
+    {
+      "id": "REQ-15",
+      "text": "Redesign the ProfilePage to replace the Instagram-style 3-column post grid and top stats row. Use a masonry or 2-column asymmetric grid for posts, and display follower/following stats as large typographic counters in a horizontal band with labels beneath them rather than as small inline numbers. The edit profile button should be a full-width outlined button styled with the app's gradient theme.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "change some parts of app which is looking similar to ig and give it diffrent look"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Post grid is masonry or 2-column asymmetric layout instead of a uniform 3-column grid",
+        "Follower/following stats are displayed as large typographic counters with labels",
+        "Edit profile button spans full width and uses gradient styling",
+        "Overall profile layout is visually distinct from Instagram's profile page"
+      ]
+    },
+    {
+      "id": "REQ-16",
+      "text": "Redesign the BottomNav to use a floating pill-shaped navigation bar instead of a full-width flat tab bar. The nav should float above the bottom edge with a shadow and backdrop blur effect. The active tab indicator should be a filled background highlight within the pill rather than an underline or icon color change. The Create Post button should be an elevated square icon button within the pill.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "change some parts of app which is looking similar to ig and give it diffrent look"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Bottom navigation renders as a floating pill/capsule shape, not a full-width bar",
+        "Nav bar has visible drop shadow and backdrop blur",
+        "Active tab shows a filled highlight background rather than an underline",
+        "Create Post button is distinctly styled as an elevated square within the pill"
+      ]
+    },
+    {
+      "id": "REQ-17",
+      "text": "Redesign the HomePage feed layout so it does not resemble Instagram's feed. Use a card-based feed with visible card background panels (using the app's glass/gradient card style) and left-accented colored borders per post type (text vs. image). Add a visual divider between the stories strip and the feed. Remove any full-bleed edge-to-edge image layout that mimics Instagram.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "change some parts of app which is looking similar to ig and give it diffrent look"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Feed cards have a visible panel background, not a plain white/dark flat card",
+        "Images in posts are contained within rounded card boundaries, not full-bleed",
+        "A clear visual section divider separates stories from the post feed",
+        "Feed does not resemble Instagram's continuous scroll image feed"
+      ]
+    },
+    {
+      "id": "REQ-18",
+      "text": "Redesign the LandingPage hero section to use an angled split layout or asymmetric two-panel design rather than a centered hero. The left/top panel should show the app logo and tagline; the right/bottom panel should show a stylized feature showcase or gradient graphic element. Replace any generic rounded CTA button with a distinctive styled button using the app's gradient and a unique shape (e.g., chamfered corners or arrow suffix).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "change some parts of app which is looking similar to ig and give it diffrent look"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Landing page uses an asymmetric or split-panel layout, not a single centered column",
+        "CTA button is visually distinct from a standard rounded rectangle",
+        "App logo and tagline are in one visual zone, feature highlights in another",
+        "Overall landing page does not resemble generic social-media app landing pages"
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify files under frontend/src/hooks/ or frontend/src/components/ui/",
+    "Preserve all existing functionality — only visual/layout changes are in scope",
+    "Maintain dark mode compatibility for all redesigned components",
+    "Keep mobile-first responsive layout; max-width mobile shell must remain"
+  ],
+  "nonGoals": [
+    "Adding new backend features or changing data models",
+    "Changing the purple-blue gradient color theme (only layout and structural UI patterns change)",
+    "Redesigning the Chat pages",
+    "Altering authentication flows or profile setup logic"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Redesign UI to differentiate ConnectSphere from Instagram's visual style",
+  "requirements": [
+    {
+      "id": "REQ-13",
+      "summary": "Redesign StoriesStrip to use rectangular card-based layout instead of circular avatar bubbles",
+      "acceptanceCriteria": [
+        "Stories strip no longer uses circular avatar-only bubbles",
+        "Story cards are rectangular or pill-shaped with a visible thumbnail area",
+        "Unseen stories use a distinct non-ring indicator (e.g., gradient left border or glow badge)",
+        "Username is visible on each story card without requiring a tap"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/StoriesStrip.tsx",
+          "operation": "modify",
+          "description": "Replace circular avatar bubbles with horizontal rectangular or pill-shaped story cards. Each card should display a square/rounded-rectangle thumbnail, the user's name below it, and use a distinct colored left border or badge for unseen stories instead of a ring indicator. Preserve the horizontal scrollable container and the create-story button."
+        }
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "summary": "Redesign PostCard to use content-first layout with author info below and pill-badge counters",
+      "acceptanceCriteria": [
+        "Post image or text content appears before the author row",
+        "Author info is in a compact single row beneath the content",
+        "Like and comment counts are styled as pill/badge elements",
+        "Action buttons use a distinct layout not resembling Instagram's bottom icon row"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/PostCard.tsx",
+          "operation": "modify",
+          "description": "Reorder the card layout to place post text/image content prominently at the top. Move the author info (avatar, display name, username, timestamp) into a compact inline row below the content. Replace the three-dot overflow menu with an inline icon row for actions (edit/delete). Display like and comment counts as pill/badge elements instead of plain text counters. Ensure dark mode compatibility and preserve all existing functionality (like, comment navigation, edit/delete)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-15",
+      "summary": "Redesign ProfilePage to use masonry/2-column post grid and large typographic stat counters",
+      "acceptanceCriteria": [
+        "Post grid is masonry or 2-column asymmetric layout instead of a uniform 3-column grid",
+        "Follower/following stats are displayed as large typographic counters with labels",
+        "Edit profile button spans full width and uses gradient styling",
+        "Overall profile layout is visually distinct from Instagram's profile page"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/ProfilePage.tsx",
+          "operation": "modify",
+          "description": "Replace the 3-column uniform post grid with a masonry or 2-column asymmetric layout. Redesign the follower/following stats row to display stats as large typographic counters in a horizontal band with labels beneath them. Style the edit profile button as a full-width outlined button using the app's gradient theme. Preserve navigation to EditProfilePage and theme toggle functionality. Maintain dark mode compatibility."
+        }
+      ]
+    },
+    {
+      "id": "REQ-16",
+      "summary": "Redesign BottomNav to use a floating pill-shaped bar with filled active tab highlight",
+      "acceptanceCriteria": [
+        "Bottom navigation renders as a floating pill/capsule shape, not a full-width bar",
+        "Nav bar has visible drop shadow and backdrop blur",
+        "Active tab shows a filled highlight background rather than an underline",
+        "Create Post button is distinctly styled as an elevated square within the pill"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/BottomNav.tsx",
+          "operation": "modify",
+          "description": "Transform the full-width flat bottom navigation bar into a floating pill-shaped navigation bar that sits above the bottom edge with spacing. Apply a drop shadow and backdrop blur effect. Change the active tab indicator from an underline or icon color to a filled background highlight within the pill. Style the Create Post button as an elevated square icon button within the pill, distinct from the other tabs. Preserve all navigation callbacks and active tab logic. Maintain dark mode compatibility and ensure the mobile-first responsive layout remains intact."
+        }
+      ]
+    },
+    {
+      "id": "REQ-17",
+      "summary": "Redesign HomePage feed layout to use card-based design with visible panels and colored borders",
+      "acceptanceCriteria": [
+        "Feed cards have a visible panel background, not a plain white/dark flat card",
+        "Images in posts are contained within rounded card boundaries, not full-bleed",
+        "A clear visual section divider separates stories from the post feed",
+        "Feed does not resemble Instagram's continuous scroll image feed"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Restructure the feed layout to use a card-based design with visible background panels using the app's glass/gradient card style. Add left-accented colored borders per post type (text vs. image). Insert a clear visual divider between the StoriesStrip and the post feed. Ensure images are contained within rounded card boundaries and avoid full-bleed edge-to-edge layouts. Preserve all existing functionality (like handlers, delete handlers, navigation to post detail). Maintain dark mode compatibility."
+        }
+      ]
+    },
+    {
+      "id": "REQ-18",
+      "summary": "Redesign LandingPage hero section to use asymmetric split layout with distinctive CTA button",
+      "acceptanceCriteria": [
+        "Landing page uses an asymmetric or split-panel layout, not a single centered column",
+        "CTA button is visually distinct from a standard rounded rectangle",
+        "App logo and tagline are in one visual zone, feature highlights in another",
+        "Overall landing page does not resemble generic social-media app landing pages"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/LandingPage.tsx",
+          "operation": "modify",
+          "description": "Redesign the hero section to use an angled split layout or asymmetric two-panel design. The left/top panel should display the app logo (reference the generated asset at frontend/public/assets/generated/connectsphere-logo.dim_256x256.png using the exact workspace path) and tagline; the right/bottom panel should show a stylized feature showcase or gradient graphic element (reference the generated hero background at frontend/public/assets/generated/connectsphere-hero-bg.dim_1200x800.png using the exact workspace path). Replace the generic rounded CTA button with a distinctive styled button using the app's gradient and a unique shape (e.g., chamfered corners or arrow suffix). Preserve the login functionality via Internet Identity. Maintain dark mode compatibility."
+        }
+      ]
+    }
+  ]
+}

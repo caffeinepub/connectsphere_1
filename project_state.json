@@ -1,0 +1,237 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 5,
+  "summary": "Building ConnectSphere - a modern social media web app with React + TypeScript frontend and Motoko/Internet Computer backend. Features include user profiles, posts (text/image), likes/comments, stories, search, notifications, dark/light mode, and poll-based chat. Purple-blue gradient design with mobile-first responsive layout. UI should be distinctly different from Instagram's look and feel.",
+  "architectural_notes": [
+    "Frontend: React + TypeScript (mobile-first responsive design)",
+    "Backend: Motoko canisters on Internet Computer (auth + database + storage)",
+    "Authentication: Internet Identity (supports Google, Apple, Microsoft)",
+    "Chat is poll-based (no WebSocket/real-time support on this platform)",
+    "Design: purple-blue gradient theme, rounded cards/buttons, smooth animations",
+    "UI must be visually distinct from Instagram — avoid similar layout patterns, icons, or interaction styles"
+  ],
+  "known_issues": [
+    "Short video uploads not supported - image posts only",
+    "Phone authentication not available via Internet Identity",
+    "Real-time chat uses polling instead of WebSockets"
+  ],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-implement-internet-identity-authentication-so-users-can-sign-up-and-log-in-using-passkeys-or-linked-accounts-google-apple-microsoft-on-first-login-prompt-the-user-to-complete-a-profile-setup-username-display-name-bio-avatar-upload",
+      "title": "Implement Internet Identity authentication so users can sign up and log in using passkeys or linked accounts (Google, Apple, Microsoft). On first login, prompt the user to complete a profile setup (username, display name, bio, avatar upload).",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-user-profile-page-that-displays-the-user-s-avatar-display-name-username-bio-follower-count-and-following-count-include-buttons-to-follow-unfollow-other-users-and-to-edit-your-own-profile-update-bio-avatar-display-name",
+      "title": "Create a user profile page that displays the user's avatar, display name, username, bio, follower count, and following count. Include buttons to follow/unfollow other users and to edit your own profile (update bio, avatar, display name).",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-post-system-allowing-users-to-create-posts-with-text-content-and-optional-image-uploads-edit-their-own-posts-and-delete-their-own-posts-posts-should-appear-in-a-scrollable-home-feed-ordered-by-most-recent",
+      "title": "Implement a post system allowing users to create posts with text content and optional image uploads, edit their own posts, and delete their own posts. Posts should appear in a scrollable home feed ordered by most recent.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-like-and-comment-functionality-to-posts-each-post-card-should-display-a-like-button-with-a-count-and-a-comment-button-that-opens-a-comment-thread-users-should-be-able-to-add-and-delete-their-own-comments",
+      "title": "Add like and comment functionality to posts. Each post card should display a like button with a count, and a comment button that opens a comment thread. Users should be able to add and delete their own comments.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-stories-feature-users-can-post-a-story-image-or-short-text-visible-for-24-hours-after-which-it-is-automatically-hidden-a-stories-bar-appears-at-the-top-of-the-home-feed-showing-avatars-of-users-with-active-stories",
+      "title": "Implement a Stories feature: users can post a story (image or short text) visible for 24 hours, after which it is automatically hidden. A Stories bar appears at the top of the home feed showing avatars of users with active stories.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-search-page-where-users-can-search-for-other-users-by-username-or-display-name-results-should-show-avatar-display-name-and-username-with-a-follow-unfollow-button-inline",
+      "title": "Implement a Search page where users can search for other users by username or display name. Results should show avatar, display name, and username with a follow/unfollow button inline.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-notifications-page-that-lists-activity-events-for-the-logged-in-user-new-followers-likes-on-their-posts-and-comments-on-their-posts-show-the-actor-s-avatar-a-short-description-and-timestamp-mark-notifications-as-read-when-viewed",
+      "title": "Build a Notifications page that lists activity events for the logged-in user: new followers, likes on their posts, and comments on their posts. Show the actor's avatar, a short description, and timestamp. Mark notifications as read when viewed.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-poll-based-chat-messaging-system-users-can-open-a-direct-message-thread-with-any-other-user-send-text-messages-and-receive-messages-the-frontend-should-poll-for-new-messages-every-few-seconds-to-simulate-near-real-time-updates",
+      "title": "Implement a poll-based chat/messaging system. Users can open a direct message thread with any other user, send text messages, and receive messages. The frontend should poll for new messages every few seconds to simulate near-real-time updates.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-dark-mode-light-mode-toggle-accessible-from-the-profile-or-settings-area-the-selected-mode-should-persist-across-sessions",
+      "title": "Add a Dark Mode / Light Mode toggle accessible from the profile or settings area. The selected mode should persist across sessions.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-fixed-bottom-navigation-bar-with-five-tabs-home-feed-search-add-post-opens-post-composer-chat-and-profile-each-tab-should-have-a-recognizable-icon-and-label-the-active-tab-should-be-visually-highlighted",
+      "title": "Implement a fixed bottom navigation bar with five tabs: Home (feed), Search, Add Post (opens post composer), Chat, and Profile. Each tab should have a recognizable icon and label. The active tab should be visually highlighted.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-modern-purple-blue-gradient-visual-theme-throughout-the-app-use-rounded-cards-and-buttons-smooth-page-transition-animations-and-a-mobile-first-responsive-layout-optimized-for-narrow-screens-typography-should-be-clean-and-modern-enforce-the-theme-consistently-across-all-pages-including-dark-mode-variants",
+      "title": "Apply a modern purple-blue gradient visual theme throughout the app. Use rounded cards and buttons, smooth page transition animations, and a mobile-first responsive layout optimized for narrow screens. Typography should be clean and modern. Enforce the theme consistently across all pages including dark mode variants.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-use-the-generated-app-logo-and-splash-background-as-static-assets-rendered-in-the-login-landing-page-and-the-app-header",
+      "title": "Use the generated app logo and splash background as static assets rendered in the login/landing page and the app header.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-redesign-the-storiesstrip-component-to-replace-circular-avatar-bubbles-instagram-style-with-a-horizontal-card-strip-using-rectangular-or-pill-shaped-story-cards-that-display-the-user-s-name-below-a-square-rounded-rectangle-thumbnail-with-a-distinct-colored-border-indicator-for-unseen-stories",
+      "title": "Redesign the StoriesStrip component to replace circular avatar bubbles (Instagram-style) with a horizontal card strip using rectangular or pill-shaped story cards that display the user's name below a square/rounded-rectangle thumbnail with a distinct colored border indicator for unseen stories.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-redesign-the-postcard-component-to-move-away-from-the-instagram-style-card-layout-use-a-content-first-layout-place-the-post-text-image-prominently-at-the-top-move-the-author-info-avatar-display-name-username-timestamp-into-a-compact-inline-row-below-the-content-and-replace-the-three-dot-overflow-menu-with-an-inline-icon-row-for-actions-the-like-and-comment-counts-should-be-displayed-as-pill-badges-rather-than-plain-text-counters",
+      "title": "Redesign the PostCard component to move away from the Instagram-style card layout. Use a content-first layout: place the post text/image prominently at the top, move the author info (avatar, display name, username, timestamp) into a compact inline row below the content, and replace the three-dot overflow menu with an inline icon row for actions. The like and comment counts should be displayed as pill badges rather than plain text counters.",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-redesign-the-profilepage-to-replace-the-instagram-style-3-column-post-grid-and-top-stats-row-use-a-masonry-or-2-column-asymmetric-grid-for-posts-and-display-follower-following-stats-as-large-typographic-counters-in-a-horizontal-band-with-labels-beneath-them-rather-than-as-small-inline-numbers-the-edit-profile-button-should-be-a-full-width-outlined-button-styled-with-the-app-s-gradient-theme",
+      "title": "Redesign the ProfilePage to replace the Instagram-style 3-column post grid and top stats row. Use a masonry or 2-column asymmetric grid for posts, and display follower/following stats as large typographic counters in a horizontal band with labels beneath them rather than as small inline numbers. The edit profile button should be a full-width outlined button styled with the app's gradient theme.",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-redesign-the-bottomnav-to-use-a-floating-pill-shaped-navigation-bar-instead-of-a-full-width-flat-tab-bar-the-nav-should-float-above-the-bottom-edge-with-a-shadow-and-backdrop-blur-effect-the-active-tab-indicator-should-be-a-filled-background-highlight-within-the-pill-rather-than-an-underline-or-icon-color-change-the-create-post-button-should-be-an-elevated-square-icon-button-within-the-pill",
+      "title": "Redesign the BottomNav to use a floating pill-shaped navigation bar instead of a full-width flat tab bar. The nav should float above the bottom edge with a shadow and backdrop blur effect. The active tab indicator should be a filled background highlight within the pill rather than an underline or icon color change. The Create Post button should be an elevated square icon button within the pill.",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-redesign-the-homepage-feed-layout-so-it-does-not-resemble-instagram-s-feed-use-a-card-based-feed-with-visible-card-background-panels-using-the-app-s-glass-gradient-card-style-and-left-accented-colored-borders-per-post-type-text-vs-image-add-a-visual-divider-between-the-stories-strip-and-the-feed-remove-any-full-bleed-edge-to-edge-image-layout-that-mimics-instagram",
+      "title": "Redesign the HomePage feed layout so it does not resemble Instagram's feed. Use a card-based feed with visible card background panels (using the app's glass/gradient card style) and left-accented colored borders per post type (text vs. image). Add a visual divider between the stories strip and the feed. Remove any full-bleed edge-to-edge image layout that mimics Instagram.",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-redesign-the-landingpage-hero-section-to-use-an-angled-split-layout-or-asymmetric-two-panel-design-rather-than-a-centered-hero-the-left-top-panel-should-show-the-app-logo-and-tagline-the-right-bottom-panel-should-show-a-stylized-feature-showcase-or-gradient-graphic-element-replace-any-generic-rounded-cta-button-with-a-distinctive-styled-button-using-the-app-s-gradient-and-a-unique-shape-e-g-chamfered-corners-or-arrow-suffix",
+      "title": "Redesign the LandingPage hero section to use an angled split layout or asymmetric two-panel design rather than a centered hero. The left/top panel should show the app logo and tagline; the right/bottom panel should show a stylized feature showcase or gradient graphic element. Replace any generic rounded CTA button with a distinctive styled button using the app's gradient and a unique shape (e.g., chamfered corners or arrow suffix).",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "User authentication via Internet Identity (Google, Apple, Microsoft)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "User profile with avatar, bio, followers & following count",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Create, edit, delete posts (text + images)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Like and comment on posts",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Stories feature (24-hour disappearing posts)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Search users by username",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Notifications page",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Dark mode / Light mode toggle",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Poll-based real-time chat/messaging system",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Bottom navigation bar (Home, Search, Add Post, Chat, Profile)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-11",
+      "summary": "Redesign UI elements that look similar to Instagram to give ConnectSphere a distinct, original visual identity",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "ConnectSphere",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

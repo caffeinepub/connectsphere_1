@@ -1,0 +1,99 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-03-02T14:32:24.682Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 6,
+    "implemented": 6,
+    "items": [
+      {
+        "id": "REQ-13",
+        "summary": "Redesign the StoriesStrip component to replace circular avatar bubbles (Instagram-style) with a horizontal card strip using rectangular or pill-shaped story cards that display the user's name below a square/rounded-rectangle thumbnail with a distinct colored border indicator for unseen stories.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/StoriesStrip.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/StoriesStrip.tsx"
+        ]
+      },
+      {
+        "id": "REQ-14",
+        "summary": "Redesign the PostCard component to move away from the Instagram-style card layout. Use a content-first layout: place the post text/image prominently at the top, move the author info (avatar, display name, username, timestamp) into a compact inline row below the content, and replace the three-dot overflow menu with an inline icon row for actions. The like and comment counts should be displayed as pill badges rather than plain text counters.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/PostCard.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/PostCard.tsx"
+        ]
+      },
+      {
+        "id": "REQ-15",
+        "summary": "Redesign the ProfilePage to replace the Instagram-style 3-column post grid and top stats row. Use a masonry or 2-column asymmetric grid for posts, and display follower/following stats as large typographic counters in a horizontal band with labels beneath them rather than as small inline numbers. The edit profile button should be a full-width outlined button styled with the app's gradient theme.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/ProfilePage.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/ProfilePage.tsx"
+        ]
+      },
+      {
+        "id": "REQ-16",
+        "summary": "Redesign the BottomNav to use a floating pill-shaped navigation bar instead of a full-width flat tab bar. The nav should float above the bottom edge with a shadow and backdrop blur effect. The active tab indicator should be a filled background highlight within the pill rather than an underline or icon color change. The Create Post button should be an elevated square icon button within the pill.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/BottomNav.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/BottomNav.tsx"
+        ]
+      },
+      {
+        "id": "REQ-17",
+        "summary": "Redesign the HomePage feed layout so it does not resemble Instagram's feed. Use a card-based feed with visible card background panels (using the app's glass/gradient card style) and left-accented colored borders per post type (text vs. image). Add a visual divider between the stories strip and the feed. Remove any full-bleed edge-to-edge image layout that mimics Instagram.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/HomePage.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/HomePage.tsx"
+        ]
+      },
+      {
+        "id": "REQ-18",
+        "summary": "Redesign the LandingPage hero section to use an angled split layout or asymmetric two-panel design rather than a centered hero. The left/top panel should show the app logo and tagline; the right/bottom panel should show a stylized feature showcase or gradient graphic element. Replace any generic rounded CTA button with a distinctive styled button using the app's gradient and a unique shape (e.g., chamfered corners or arrow suffix).",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/LandingPage.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/LandingPage.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "build-request.json",
+    "build-template/README.md",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/src/components/BottomNav.tsx",
+    "frontend/src/components/PostCard.tsx",
+    "frontend/src/components/StoriesStrip.tsx",
+    "frontend/src/index.css",
+    "frontend/src/pages/HomePage.tsx",
+    "frontend/src/pages/LandingPage.tsx",
+    "frontend/src/pages/ProfilePage.tsx",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

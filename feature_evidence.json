@@ -1,0 +1,125 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-redesign-the-storiesstrip-component-to-replace-circular-avatar-bubbles-instagram-style-with-a-horizontal-card-strip-using-rectangular-or-pill-shaped-story-cards-that-display-the-user-s-name-below-a-square-rounded-rectangle-thumbnail-with-a-distinct-colored-border-indicator-for-unseen-stories",
+      "featureTitle": "Redesign the StoriesStrip component to replace circular avatar bubbles (Instagram-style) with a horizontal card strip using rectangular or pill-shaped story cards that display the user's name below a square/rounded-rectangle thumbnail with a distinct colored border indicator for unseen stories.",
+      "files": [
+        "frontend/src/components/StoriesStrip.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-13"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-redesign-the-postcard-component-to-move-away-from-the-instagram-style-card-layout-use-a-content-first-layout-place-the-post-text-image-prominently-at-the-top-move-the-author-info-avatar-display-name-username-timestamp-into-a-compact-inline-row-below-the-content-and-replace-the-three-dot-overflow-menu-with-an-inline-icon-row-for-actions-the-like-and-comment-counts-should-be-displayed-as-pill-badges-rather-than-plain-text-counters",
+      "featureTitle": "Redesign the PostCard component to move away from the Instagram-style card layout. Use a content-first layout: place the post text/image prominently at the top, move the author info (avatar, display name, username, timestamp) into a compact inline row below the content, and replace the three-dot overflow menu with an inline icon row for actions. The like and comment counts should be displayed as pill badges rather than plain text counters.",
+      "files": [
+        "frontend/src/components/PostCard.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-14"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-redesign-the-profilepage-to-replace-the-instagram-style-3-column-post-grid-and-top-stats-row-use-a-masonry-or-2-column-asymmetric-grid-for-posts-and-display-follower-following-stats-as-large-typographic-counters-in-a-horizontal-band-with-labels-beneath-them-rather-than-as-small-inline-numbers-the-edit-profile-button-should-be-a-full-width-outlined-button-styled-with-the-app-s-gradient-theme",
+      "featureTitle": "Redesign the ProfilePage to replace the Instagram-style 3-column post grid and top stats row. Use a masonry or 2-column asymmetric grid for posts, and display follower/following stats as large typographic counters in a horizontal band with labels beneath them rather than as small inline numbers. The edit profile button should be a full-width outlined button styled with the app's gradient theme.",
+      "files": [
+        "frontend/src/pages/ProfilePage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-15"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-redesign-the-bottomnav-to-use-a-floating-pill-shaped-navigation-bar-instead-of-a-full-width-flat-tab-bar-the-nav-should-float-above-the-bottom-edge-with-a-shadow-and-backdrop-blur-effect-the-active-tab-indicator-should-be-a-filled-background-highlight-within-the-pill-rather-than-an-underline-or-icon-color-change-the-create-post-button-should-be-an-elevated-square-icon-button-within-the-pill",
+      "featureTitle": "Redesign the BottomNav to use a floating pill-shaped navigation bar instead of a full-width flat tab bar. The nav should float above the bottom edge with a shadow and backdrop blur effect. The active tab indicator should be a filled background highlight within the pill rather than an underline or icon color change. The Create Post button should be an elevated square icon button within the pill.",
+      "files": [
+        "frontend/src/components/BottomNav.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-16"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-redesign-the-homepage-feed-layout-so-it-does-not-resemble-instagram-s-feed-use-a-card-based-feed-with-visible-card-background-panels-using-the-app-s-glass-gradient-card-style-and-left-accented-colored-borders-per-post-type-text-vs-image-add-a-visual-divider-between-the-stories-strip-and-the-feed-remove-any-full-bleed-edge-to-edge-image-layout-that-mimics-instagram",
+      "featureTitle": "Redesign the HomePage feed layout so it does not resemble Instagram's feed. Use a card-based feed with visible card background panels (using the app's glass/gradient card style) and left-accented colored borders per post type (text vs. image). Add a visual divider between the stories strip and the feed. Remove any full-bleed edge-to-edge image layout that mimics Instagram.",
+      "files": [
+        "frontend/src/pages/HomePage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-17"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-redesign-the-landingpage-hero-section-to-use-an-angled-split-layout-or-asymmetric-two-panel-design-rather-than-a-centered-hero-the-left-top-panel-should-show-the-app-logo-and-tagline-the-right-bottom-panel-should-show-a-stylized-feature-showcase-or-gradient-graphic-element-replace-any-generic-rounded-cta-button-with-a-distinctive-styled-button-using-the-app-s-gradient-and-a-unique-shape-e-g-chamfered-corners-or-arrow-suffix",
+      "featureTitle": "Redesign the LandingPage hero section to use an angled split layout or asymmetric two-panel design rather than a centered hero. The left/top panel should show the app logo and tagline; the right/bottom panel should show a stylized feature showcase or gradient graphic element. Replace any generic rounded CTA button with a distinctive styled button using the app's gradient and a unique shape (e.g., chamfered corners or arrow suffix).",
+      "files": [
+        "frontend/src/pages/LandingPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-18"
+      ],
+      "confidence": "high"
+    }
+  ]
+}
